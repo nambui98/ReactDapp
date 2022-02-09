@@ -39,3 +39,8 @@ typechain
 #Hardhat files
 cache
 artifacts
+
+.vercel
+
+# Local Netlify folder
+.netlify

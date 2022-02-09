@@ -68,7 +68,7 @@ export default function Home() {
               </Col>
               <Col span={5}>
                 <Row display="flex" justify="flex-end">
-                  <a href="https://github.com/nextui-org/nextui">
+                  <a href="https://github.com/nambui98/ReactDapp">
                     <Button color="primary" auto ghost>
                       <BsGithub />
                     </Button>

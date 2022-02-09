@@ -1,9 +1,15 @@
 {
+  "name": "nambvcoin",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "build:frontend": "next build",
+    "build:contracts": "hardhat compile",
+    "start": "next start",
+    "lint": "next lint",
+    "eth-server": "hardhat node",
+    "deploy:localhost": "hardhat run scripts/deploy.js --network localhost",
+    "deploy:ropsten": "hardhat run scripts/deploy.js --network ropsten"
   },
   "dependencies": {
     "@nextui-org/react": "^1.0.2-beta.3",
@@ -21,5 +27,9 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "8.4.1",
+    "eslint-config-next": "12.0.7"
   }
 }
