@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 import Nambv from '../artifacts/contracts/Nambv.sol/Nambv.json'
 
-const nambvAddress = '0x5868B71c225BE428Ae65e48c7d8Ef9e12AB76766'
+const nambvAddress = '0xEaE8e3b2786ebEAC3CAA26EA179234b657a5ecDE'
 
 export default function useToken() {
   const [balance, setBalance] = useState('')
