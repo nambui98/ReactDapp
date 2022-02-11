@@ -1,14 +1,12 @@
-import Head from 'next/head'
-import { Button, Card, Col, Container, Input, Link, Loading, Modal, Row, Spacer, Text } from '@nextui-org/react';
-import { BsGithub, BsFillSunFill, BsFillBrightnessHighFill, BsFillMoonFill } from 'react-icons/bs';
-import { ethers } from 'ethers'
-import Greeter from '../artifacts/contracts/Greeter.sol/Greeter.json'
-import logo from '../assets/logo.png'
+import { Button, Card, Col, Container, Loading, Modal, Row, Text } from '@nextui-org/react';
+import { ethers } from 'ethers';
+import { useTheme as useNextTheme } from 'next-themes';
+import Head from 'next/head';
 import Image from 'next/image';
 import { useCallback, useEffect, useState } from 'react';
-import { useTheme as useNextTheme } from 'next-themes'
-import { Switch, useTheme } from '@nextui-org/react'
-import useToken from '../hooks/useToken'
+import { BsFillMoonFill, BsFillSunFill, BsGithub } from 'react-icons/bs';
+import logo from '../public/logo.png';
+import useToken from '../hooks/useToken';
 
 export default function Home() {
   const [visible, setVisible] = useState(false);
@@ -55,8 +53,8 @@ export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Dapp make by nambv</title>
+        <link rel="icon" href="/logoIcon.png" />
       </Head>
 
       <Container xl sm md lg xs style={{ height: "100vh" }} display="flex" alignItems='center' justify="center">
