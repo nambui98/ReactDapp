@@ -99,21 +99,21 @@ export default function useToken() {
     await vote.wait()
     console.log(vote)
   }
-  async function claimTokens1000000() {
-    if (!window.ethereum) return
-    try {
-      const provider = new ethers.providers.Web3Provider(window.ethereum)
-      const signer = provider.getSigner()
-      console.log(Token.abi);
-      console.log(`Sending tokens to account ${signer} ...`)
-      const contract = new ethers.Contract(tokenAddress, Token.abi, signer)
-      const transaction = await contract.claimTokens1000000()
-      await transaction.wait()
-      console.log('Tokens claimed')
-    } catch (err) {
-      console.error(err)
-    }
-  }
+  // async function claimTokens1000000() {
+  //   if (!window.ethereum) return
+  //   try {
+  //     const provider = new ethers.providers.Web3Provider(window.ethereum)
+  //     const signer = provider.getSigner()
+  //     console.log(Token.abi);
+  //     console.log(`Sending tokens to account ${signer} ...`)
+  //     const contract = new ethers.Contract(tokenAddress, Token.abi, signer)
+  //     const transaction = await contract.claimTokens1000000()
+  //     await transaction.wait()
+  //     console.log('Tokens claimed')
+  //   } catch (err) {
+  //     console.error(err)
+  //   }
+  // }
   return {
     getBalance,
     balance,
