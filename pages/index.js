@@ -59,9 +59,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Container style={{ height: "100vh" }} display="flex" alignItems='center' justify="center">
+      <Container xl sm md lg xs style={{ height: "100vh" }} display="flex" alignItems='center' justify="center">
         <Row display="flex" alignItems='center' justify="center">
-          <Col span={6}>
+          <Col>
             <Row ơ        >
               <Col>
                 <Image src={logo} height={42.5} width={150} />
