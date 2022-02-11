@@ -7,11 +7,11 @@ async function main() {
     "Deploying contracts with the account:",
     deployer.address
   );
-  const Yen = await hre.ethers.getContractFactory("Yen");
-  const yen = await Yen.deploy();
-  await yen.deployed();
+  const Nambv = await hre.ethers.getContractFactory("Nambv");
+  const nambv = await Nambv.deploy();
+  await nambv.deployed();
 
-  console.log("Yen deployed to:", yen.address);
+  console.log("Nambv deployed to:", nambv.address);
 }
 
 main()

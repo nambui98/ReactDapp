@@ -60,7 +60,7 @@ export default function Home() {
           <Col>
             <Row ơ        >
               <Col>
-                <img src={"/logo.png"} style={{ width: 50 }} />
+                <Image src={logo} height={42.5} width={150} />
               </Col>
               <Col span={5}>
                 <Row display="flex" justify="flex-end">
@@ -139,7 +139,7 @@ export default function Home() {
             Token Name: <Text b>{info.name}</Text>
           </Text>
           <Text>
-            Token Contract Address: <Text b>0x8774153997f0C008B07021B173B6a472b47046Fe</Text>
+            Token Contract Address: <Text b>0x537E8e733a9E26c9c79dC518FA09c7d43Aa5F0e5</Text>
           </Text>
           <Text>
             Token Symbol: <Text b>{info.symbol}</Text>
