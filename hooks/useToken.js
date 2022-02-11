@@ -1,9 +1,8 @@
 import { ethers } from 'ethers'
-import { useEffect } from 'react'
 import { useState } from 'react'
 import Nambv from '../artifacts/contracts/Nambv.sol/Nambv.json'
 
-const nambvAddress = '0xEaE8e3b2786ebEAC3CAA26EA179234b657a5ecDE'
+const nambvAddress = '0x537E8e733a9E26c9c79dC518FA09c7d43Aa5F0e5'
 
 export default function useToken() {
   const [balance, setBalance] = useState('')

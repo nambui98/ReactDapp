@@ -22,9 +22,6 @@ export default function Home() {
     isFetchingBalance,
     claimTokens,
     isClaiming,
-    getVotes,
-    castVote,
-    votes,
     getInfoToken,
     info
   } = useToken()
@@ -36,7 +33,8 @@ export default function Home() {
     try {
       const provider = new ethers.providers.Web3Provider(window.ethereum)
       const { name } = await provider.getNetwork()
-      if (name === 'ropsten') {
+      console.log(name);
+      if (name === 'bnbt') {
         setIsCorrectNetwork(true)
       } else {
         setIsCorrectNetwork(false)
@@ -89,7 +87,7 @@ export default function Home() {
               {!isCorrectNetwork && (
                 <Card color='error'>
                   <Text css={{ fontWeight: '$bold', color: '$white' }} transform="capitalize">
-                    You must connect to the Ropsten network
+                    You must connect to the Smart Chain - Testnet
                   </Text>
                 </Card>
 
