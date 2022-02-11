@@ -29,5 +29,11 @@ module.exports = {
       url: 'https://ropsten.infura.io/v3/d41738e3d25a4feda480e1aa5276083b',
       accounts: [`0x${process.env.ACCOUNT_KEY}`],
     },
+    testnet: {
+      url: "https://data-seed-prebsc-1-s1.binance.org:8545",
+      chainId: 97,
+      gasPrice: 20000000000,
+      accounts: [`0x${process.env.ACCOUNT_KEY_BNB}`],
+    },
   }
 };
