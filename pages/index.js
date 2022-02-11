@@ -143,7 +143,7 @@ export default function Home() {
             Token Name: <Text b>{info.name}</Text>
           </Text>
           <Text>
-            Token Contract Address: <Text b>0x5868B71c225BE428Ae65e48c7d8Ef9e12AB76766</Text>
+            Token Contract Address: <Text b>0xEaE8e3b2786ebEAC3CAA26EA179234b657a5ecDE</Text>
           </Text>
           <Text>
             Token Symbol: <Text b>{info.symbol}</Text>
