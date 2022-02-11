@@ -5,7 +5,7 @@ import { ethers } from 'ethers'
 import Greeter from '../artifacts/contracts/Greeter.sol/Greeter.json'
 import logo from '../assets/logo.png'
 import Image from 'next/image';
-import { useCallback, useEffect, useState } from 'react/cjs/react.development';
+import { useCallback, useEffect, useState } from 'react';
 import { useTheme as useNextTheme } from 'next-themes'
 import { Switch, useTheme } from '@nextui-org/react'
 import useToken from '../hooks/useToken'
