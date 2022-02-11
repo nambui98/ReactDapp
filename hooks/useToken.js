@@ -1,8 +1,10 @@
 import { ethers } from 'ethers'
 import { useState } from 'react'
 import Nambv from '../artifacts/contracts/Nambv.sol/Nambv.json'
+import Yen from '../artifacts/contracts/Yen.sol/Yen.json'
 
 const nambvAddress = '0x537E8e733a9E26c9c79dC518FA09c7d43Aa5F0e5'
+const yenAddress = '0x8774153997f0C008B07021B173B6a472b47046Fe'
 
 export default function useToken() {
   const [balance, setBalance] = useState('')
@@ -23,7 +25,7 @@ export default function useToken() {
     })
     console.log('Getting balance for account: ', account)
     const provider = new ethers.providers.Web3Provider(window.ethereum)
-    const contract = new ethers.Contract(nambvAddress, Nambv.abi, provider)
+    const contract = new ethers.Contract(yenAddress, Yen.abi, provider)
     const balance = await contract.balanceOf(account)
     setBalance(balance.toString())
     setIsFetchingBalance(false)
@@ -37,7 +39,7 @@ export default function useToken() {
     console.log(`Sending ${wholeTokens} tokens to account ${toAddress} ...`)
     const provider = new ethers.providers.Web3Provider(window.ethereum)
     const signer = provider.getSigner()
-    const contract = new ethers.Contract(nambvAddress, Nambv.abi, signer)
+    const contract = new ethers.Contract(yenAddress, Yen.abi, signer)
     const transaction = await contract.transfer(toAddress, wholeTokens)
     await transaction.wait()
     console.log(`${wholeTokens} tokens sent to ${toAddress}`)
@@ -51,7 +53,7 @@ export default function useToken() {
       const provider = new ethers.providers.Web3Provider(window.ethereum)
       const signer = provider.getSigner()
       console.log(`Sending tokens to account ${signer} ...`)
-      const contract = new ethers.Contract(nambvAddress, Nambv.abi, signer)
+      const contract = new ethers.Contract(yenAddress, Yen.abi, signer)
       const transaction = await contract.claimTokens()
       await transaction.wait()
       console.log('Tokens claimed')
@@ -67,7 +69,7 @@ export default function useToken() {
       const provider = new ethers.providers.Web3Provider(window.ethereum)
       const signer = provider.getSigner()
       console.log(`Sending tokens to account ${signer} ...`)
-      const contract = new ethers.Contract(nambvAddress, Nambv.abi, signer)
+      const contract = new ethers.Contract(yenAddress, Yen.abi, signer)
       const name = await contract.name();
       const symbol = await contract.symbol();
       setInfo({
